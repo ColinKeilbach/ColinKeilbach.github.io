@@ -16,7 +16,19 @@ function App() {
         >
           Learn React
         </a>
+        {Box("This website was made using React", "/logo192.png", "React Logo")}
       </header>
+    </div>
+  );
+}
+
+function Box(string, image, imageAlt) {
+  return(
+    <div className="Box">
+      <img src={image} alt={imageAlt}/>
+      <p className="BoxText">
+        {string}
+      </p>
     </div>
   );
 }

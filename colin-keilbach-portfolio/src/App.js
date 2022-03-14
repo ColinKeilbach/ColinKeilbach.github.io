@@ -17,6 +17,7 @@ function App() {
           Learn React
         </a>
         {Box("This website was made using React", "/logo192.png", "React Logo")}
+        {Circle()}
       </header>
     </div>
   );
@@ -31,6 +32,12 @@ function Box(string, image, imageAlt) {
       </p>
     </div>
   );
+}
+
+function Circle() {
+  return(
+    <div className="Circle"></div>
+  )
 }
 
 export default App;

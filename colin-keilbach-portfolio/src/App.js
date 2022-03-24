@@ -17,7 +17,7 @@ function App() {
         >
           Learn React
         </a>
-        <Node string="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."/>
+        <Node title="Project Title" description="This text is a description of the project. Click the link below to go to the full page on this project." src="/testImage.png" alt="Logo" href=""/>
         <button onClick={() => {
           let node = document.querySelector(".Node");
 
@@ -43,7 +43,7 @@ function Circle() {
   )
 }
 
-function Node({string}) {
+function Node({title, description, src, alt, href}) {
   const ref = useRef(null);
 
   useEffect(() => {
@@ -53,7 +53,14 @@ function Node({string}) {
 
   return(
     <div className="Node off" ref={ref}>
-      {string}
+      <img className="NodeImage" src={src} alt={alt}/>
+      <a className="NodeTitle">{title}</a>
+      <p className="NodeDescription">{description}</p>
+      <a className="NodeLink"
+        href={href}
+        target="_self"
+        rel="noopener noreferrer"
+        >See more information →</a>
     </div>
   )
 }

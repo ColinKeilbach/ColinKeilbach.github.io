@@ -1,3 +1,5 @@
+/* #region React Defaults */
+
 .App {
   text-align: center;
 }
@@ -28,31 +30,18 @@
   color: #61dafb;
 }
 
-.Box {
-  background-color: #61dafb;
-  border-style: solid;
-  border-radius: 10px;
-  border-width: 2px;
-  align-items: center;
-  color: rgb(0, 0, 0);
-  margin: 10px;
-  font-size: calc(10px + 2vmin);
-  padding: 0.25em;
-  line-height: 1em;
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.Circle {
-  height: 25px;
-  width: 25px;
-  background-color: #61dafb;
-  color: black;
-  border-radius: 50%;
-  border-style: solid;
-  border-width: 2px;
-  display: inline-block;
-}
+/* #endregion */
 
-/* || Node */
+/* #region || Node */
 
 .Node {
   width: 24em;
@@ -200,20 +189,15 @@
   }
 }
 
-/* || Bezier Curve */
+/* #endregion */
 
-path {
+/* #region || Bezier Curve */
+
+.BezierCurve {
   stroke-width: 1;
   stroke: #000;
   stroke-linecap: round;
   fill: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* #endregion */

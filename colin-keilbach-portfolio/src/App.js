@@ -25,6 +25,7 @@ function App() {
           alt="Test Image"
           href=""
           background="orange"
+          id="node1"
         />
         <Node
           title="Project Title"
@@ -34,23 +35,26 @@ function App() {
           alt="Test Image"
           href=""
           background="orange"
+          id="node2"
         />
-        <SmoothCurve start="5,5" end="45,45" />
       </header>
     </div>
   );
 }
 
-function Box({ string }) {
-  return <div className="Box">{string}</div>;
-}
-
-function Circle() {
-  return <div className="Circle"></div>;
-}
+/* #region Element Definitions */
 
 // Node element
-function Node({ title, date, description, src, alt, href, background }) {
+function Node({
+  title,
+  date,
+  description,
+  src,
+  alt,
+  href,
+  background = "blue",
+  id,
+}) {
   const ref = useRef(null);
   const imgRef = useRef(null);
 
@@ -62,7 +66,7 @@ function Node({ title, date, description, src, alt, href, background }) {
 
   return (
     <div>
-      <div className="Node off" ref={ref}>
+      <div className="Node off" ref={ref} id={id}>
         <div className="NodeHeader">
           <img className="NodeImage off" src={src} alt={alt} ref={imgRef} />
           <div className="NodeTitleDate">
@@ -153,6 +157,10 @@ function BezierCurve({ point0, point1, point2, point3 }) {
   );
 }
 
+/* #endregion */
+
+/* #region Functions */
+
 function isInViewport(element) {
   const rect = element.getBoundingClientRect();
   return (
@@ -163,5 +171,7 @@ function isInViewport(element) {
     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
   );
 }
+
+/* #endregion */
 
 export default App;

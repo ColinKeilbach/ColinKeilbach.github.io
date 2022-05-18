@@ -14,6 +14,7 @@ import React, { useRef, useEffect } from "react";
 const Home = () => {
   return (
     <div>
+      <ProfileNode />
       <Node background="#ed9900" />
       <Node background="#0095f2" />
       <Node background="#009100" />
@@ -23,13 +24,31 @@ const Home = () => {
 
 /* #region Element Definitions */
 
-// Node element
+// Profile Node Element
+function ProfileNode({
+  title = "Name",
+  description = "Short bio",
+  src = "testImage.png",
+  alt = "Profile Image",
+}) {
+  return (
+    <div className="ProfileNode">
+      <img className="ProfileImage" src={src} alt={alt}></img>
+      <div className="ProfileInfoBox">
+        <h1>{title}</h1>
+        <p>{description}</p>
+      </div>
+    </div>
+  );
+}
+
+// Node Element
 function Node({
   title = "Project Title",
   date = "May 2001 - May 2022",
   description = "Project description in a few sentances.",
   src = "testImage.png",
-  alt = "Test Image",
+  alt = "Project Image",
   href = "/",
   background = "blue",
   id,

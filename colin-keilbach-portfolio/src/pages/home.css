@@ -1,4 +1,31 @@
 
+/* #region || Profile Node */
+
+.ProfileNode {
+  width: 80vw;
+  height: 75vh;
+  --background-color: #61dafb;
+  display: grid;
+  grid-template-columns: 50% auto;
+  background-color: var(--background-color);
+  color: black;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 1em;
+  border-color: black;
+  margin-left: 9vw;
+  margin-top: 3vh;
+  padding: 0.25em;
+}
+
+.ProfileImage {
+  width: 88.25%;
+  border-radius: 1em;
+  grid-column: col 0/ span 1;
+}
+
+/* #endregion */
+
 /* #region || Node */
 
 .Node {

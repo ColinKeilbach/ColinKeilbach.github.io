@@ -3,10 +3,10 @@
 
 .ProfileNode {
   width: 80vw;
-  height: 75vh;
-  --background-color: #61dafb;
+  height: auto;
+  --background-color: #0095f2;
   display: grid;
-  grid-template-columns: 50% auto;
+  grid-template-columns: min-content auto;
   background-color: var(--background-color);
   color: black;
   border-style: solid;
@@ -19,9 +19,24 @@
 }
 
 .ProfileImage {
-  width: 88.25%;
+  height: 100%;
   border-radius: 1em;
   grid-column: col 0/ span 1;
+}
+
+.ProfileInfoBox {
+  padding-left: 0.5em;
+}
+
+.ProfileTitle {
+  font-size: 5em;
+  margin: 0;
+}
+
+.ProfileDescription {
+  font-size: 1.5em;
+  text-align: left;
+  word-wrap: normal;
 }
 
 /* #endregion */

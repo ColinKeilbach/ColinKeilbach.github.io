@@ -4,20 +4,26 @@ import React, { useRef, useEffect } from "react";
 /* 
  || Colors
  ||   Blue: #0095f2
- ||  Green: 
- || Orange: 
+ || Orange: #ed9900
  ||   Grey: 
  || D-Grey: 
  ||  Black: #000000
 */
 
+// Colors
+const blue = "#0095f2";
+const orange = "#ed9900";
+
+// Description
+const descriptionContent =
+  "I am a game programmer at Champlain College. I like to focus on making AI for games.";
+
 const Home = () => {
   return (
     <div>
-      <ProfileNode />
-      <Node background="#ed9900" />
-      <Node background="#0095f2" />
-      <Node background="#009100" />
+      <ProfileNode title="Colin Keilbach" description={descriptionContent} />
+      <Node background={blue} />
+      <Node background={orange} />
     </div>
   );
 };
@@ -35,8 +41,9 @@ function ProfileNode({
     <div className="ProfileNode">
       <img className="ProfileImage" src={src} alt={alt}></img>
       <div className="ProfileInfoBox">
-        <h1>{title}</h1>
-        <p>{description}</p>
+        <h1 className="ProfileTitle">{title}</h1>
+        <p className="ProfileDescription">{description}</p>
+        <div className="Profile Links"></div>
       </div>
     </div>
   );

@@ -5,22 +5,18 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 //Pages
 import Home from "./pages/home";
 import Timeline from "./pages/timeline";
-
-//Components
-import Navigation from "./components/navigation";
+import PongInAssembly from "./pages/progects/pong-in-assembly";
 
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
         <div>
-          <div className="Site-header">
-            <img className="Site-logo" alt="Logo" src="logo192.png" />
-            <Navigation className="Site-nav" />
-          </div>
           <Routes>
             <Route path="/" element={<Home />} exact />
-            <Route path="/all-projects" element={<Timeline />} />
+            <Route path="/projects" element={<Timeline />}>
+              <Route path=":pong-in-assembly" element={<PongInAssembly />} />
+            </Route>
           </Routes>
         </div>
       </BrowserRouter>

@@ -22,7 +22,7 @@ const Home = () => {
   return (
     <div>
       <ProfileNode title="Colin Keilbach" description={descriptionContent} />
-      <Node background={blue} />
+      <Node background={blue} href="/projects/pong-in-assembly" />
       <Node background={orange} />
     </div>
   );
